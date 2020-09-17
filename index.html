@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- <script src="assets/script.js" defer></script> same as script src= script.js at the bottom -->
+</head>
+
+<body>
+    <header>
+        <div id="score">
+            score: <span id="scoreCounter"></span>
+
+        </div>
+        <div id="timer">
+            timer: <span id="time"> </span>
+        </div>
+    </header>
+    <div class="main">
+        <div id="startPage">
+            <h1> Coding Quiz Challenge </h1>
+            <p> try to answer the following code related questions within the time limit. Keep in mind that incorrect
+                answers will penalize your score/time by 10 seconds. </p>
+            <button id="startBtn">Start Quiz</button>
+        </div>
+        <div id="questions" class="hide">
+            <h2 id="questionsTitle"></h2>
+            <div id="choices"></div>
+
+        </div>
+        <div id="endPage" class="hide">
+            <p> your final score is <span id="finalScore"></span></p>
+            <p>enter your intials <input type="text" id="initials" /> <button id="submitInt"> submit intials</button>
+            </p>
+
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
