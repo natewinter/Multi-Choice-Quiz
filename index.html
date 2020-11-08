@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>MultiChoice Quiz</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MultiChoice Quiz</title>
 </head>
 
 <body>
     <div class="container">
         <header>
             <div class="pull]-left"> HTML5 Quiz</div>
-            <div class="pull-right">timer!</div>
+            <div class="pull-right" id="timer"></div>
         </header>
         <main>
+
+            <div class="questionForm" id="start">
+                <button id="startBtn" type="submit">start</button>
+            </div>
+
             <form class="questionForm" id="q1" data-questions="1">
-                <h3> 1. Which tag should be used to represent the "header" of a document?</h3>
+                <h3> 1. What kind of time does Space Dandy have?</h3>
                 <ul>
-                    <li><input type="radio" name="q1" value="a">&lt;head&gt;</li>
-                    <li><input type="radio" name="q1" value="b">&lt;header&gt;</li>
-                    <li><input type="radio" name="q1" value="c">&lt;main&gt;</li>
-                    <li><input type="radio" name="q1" value="d">&lt;heading&gt;</li>
+                    <li><input type="radio" name="q1" value="a">Dandy</li>
+                    <li><input type="radio" name="q1" value="b">Groovy</li>
+                    <li><input type="radio" name="q1" value="c">Wavy</li>
+                    <li><input type="radio" name="q1" value="d">Bad</li>
                 </ul>
-                <button id="submit">submit</button>
+                <button id="submit1">submit</button>
             </form>
             <form class="questionForm" id="q2" data-questions="2">
-                <h3> 2. Which of the following is NOT a new feature of HTML5?</h3>
+                <h3> 2. What was the first animal in space?</h3>
                 <ul>
-                    <li><input type="radio" name="q2" value="a">New Media Elements</li>
-                    <li><input type="radio" name="q2" value="b">Form Input Types</li>
-                    <li><input type="radio" name="q2" value="c">Local Storage</li>
-                    <li><input type="radio" name="q2" value="d">Cookies</li>
+                    <li><input type="radio" name="q2" value="a">Dog</li>
+                    <li><input type="radio" name="q2" value="b">Fruit Flies</li>
+                    <li><input type="radio" name="q2" value="c">Humans</li>
+                    <li><input type="radio" name="q2" value="d">Monkey</li>
                 </ul>
-                <button id="submit">submit</button>
+                <button id="submit2">submit</button>
             </form>
             <form class="questionForm" id="q3" data-questions="3">
-                <h3> 3. Which element is the most appropriate to wrap around each blog post on a page?</h3>
+                <h3> 3. What is the moon?</h3>
                 <ul>
-                    <li><input type="radio" name="q3" value="a">&lt;section&gt;</li>
-                    <li><input type="radio" name="q3" value="b">&lt;post&gt;</li>
-                    <li><input type="radio" name="q3" value="c">&lt;span&gt;</li>
-                    <li><input type="radio" name="q3" value="d">&lt;article&gt;</li>
+                    <li><input type="radio" name="q3" value="a">Planet</li>
+                    <li><input type="radio" name="q3" value="b">Star</li>
+                    <li><input type="radio" name="q3" value="c">Natural Satellite</li>
+                    <li><input type="radio" name="q3" value="d">The Moon</li>
                 </ul>
-                <button id="submit">submit</button>
+                <button id="submit3">submit</button>
             </form>
             <form class="questionForm" id="q4" data-questions="4">
-                <h3> 4. what color is the sky?</h3>
+                <h3> 4. what color is Grass?</h3>
                 <ul>
-                    <li><input type="radio" name="q4" value="a">blue</li>
-                    <li><input type="radio" name="q4" value="b">red</li>
-                    <li><input type="radio" name="q4" value="c">green</li>
-                    <li><input type="radio" name="q4" value="d">purple</li>
+                    <li><input type="radio" name="q4" value="a">Blue</li>
+                    <li><input type="radio" name="q4" value="b">Red</li>
+                    <li><input type="radio" name="q4" value="c">Purple</li>
+                    <li><input type="radio" name="q4" value="d">Green</li>
                 </ul>
-                <button id="submit">submit</button>
+                <button id="submit4">submit</button>
             </form>
             <form class="questionForm" id="q5" data-questions="5">
-                <h3> 5. what color is the ocean?</h3>
+                <h3> 5. what color is associated with anger?</h3>
                 <ul>
-                    <li><input type="radio" name="q5" value="a">red</li>
-                    <li><input type="radio" name="q5" value="b">green</li>
-                    <li><input type="radio" name="q5" value="c">yellow</li>
-                    <li><input type="radio" name="q5" value="d">blue</li>
+                    <li><input type="radio" name="q5" value="a">Red</li>
+                    <li><input type="radio" name="q5" value="b">Green</li>
+                    <li><input type="radio" name="q5" value="c">Yellow</li>
+                    <li><input type="radio" name="q5" value="d">Blue</li>
                 </ul>
-                <button id="submit">submit</button>
+                <button id="submit5">submit</button>
             </form>
-            <div id="results"></div>
+           
+            <div  id="gameOver">
+                <h1>Quiz Completed!</h1>
+                <p>
+                    Enter your initials! <input id="initials" type="text" max="3">
+                    <button id="submitHS" type="submit">submit!</button>
+                </p>
+
+            </div>
+             <div id="results">
+                <h1>Highscores!</h1>
+                <ul id="highscores"></ul>
+                <button id="clearHs">clear Highscores</button>
+                <button id="restart">Restart Quiz</button>
+            </div>
             <br>
+
         </main>
         <footer>
-            <div class="pull-left"> 
+            <div class="pull-left">
                 Total:5 questions
             </div>
         </footer>
-    </div> <!--container-->
+    </div>
+    <!--container-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="script.js"></script>
 
